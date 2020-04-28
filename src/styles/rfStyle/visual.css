@@ -1,0 +1,26 @@
+/* visual */
+
+body {
+    background-size: cover;
+    background-image: url("../../assets/bigbanner.jpg");
+    color: #62c8ff !important;
+}
+
+::-webkit-scrollbar-track-piece {
+    background-color: #DDDDDD;
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #62c8ff;
+    background-clip: padding-box;
+    min-height: 28px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #DDDDDD;
+}

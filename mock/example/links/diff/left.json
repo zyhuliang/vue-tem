@@ -1,0 +1,339 @@
+"inputData": [
+    {
+        "id": "input",
+        "fields": [
+            {
+                "column": "CREMATORID",
+                "alias": ""
+            },
+            {
+                "column": "INCINERATEMAN",
+                "alias": ""
+            },
+            {
+                "column": "WHEINTUITION",
+                "alias": ""
+            },
+            {
+                "column": "WHEPICKASH",
+                "alias": ""
+            },
+            {
+                "column": "WHEADVANCE",
+                "alias": ""
+            },
+            {
+                "column": "TAKEGRAYTIME",
+                "alias": ""
+            },
+            {
+                "column": "ASHGOTO",
+                "alias": ""
+            },
+            {
+                "column": "FAMILYSIGN",
+                "alias": ""
+            },
+            {
+                "column": "left_RELATIONSHIP",
+                "alias": ""
+            },
+            {
+                "column": "SIGNERTEL",
+                "alias": ""
+            },
+            {
+                "column": "SIGNERCAEDID",
+                "alias": ""
+            },
+            {
+                "column": "MANAGER",
+                "alias": ""
+            },
+            {
+                "column": "left_FUNERALID",
+                "alias": ""
+            },
+            {
+                "column": "left_FUNERALNAME",
+                "alias": ""
+            },
+            {
+                "column": "left_REMARKS",
+                "alias": ""
+            },
+            {
+                "column": "left_ADDER",
+                "alias": ""
+            },
+            {
+                "column": "left_ADDERID",
+                "alias": ""
+            },
+            {
+                "column": "left_ADDUNIT",
+                "alias": ""
+            },
+            {
+                "column": "left_ADDUNITID",
+                "alias": ""
+            },
+            {
+                "column": "left_ADDTIME",
+                "alias": ""
+            },
+            {
+                "column": "left_DELFLAG",
+                "alias": ""
+            },
+            {
+                "column": "INCINERATECERTTIME",
+                "alias": ""
+            },
+            {
+                "column": "SIGNERCARDTYPE",
+                "alias": ""
+            },
+            {
+                "column": "ID",
+                "alias": ""
+            },
+            {
+                "column": "INCINERATENO",
+                "alias": ""
+            },
+            {
+                "column": "INCINERATETIME",
+                "alias": ""
+            },
+            {
+                "column": "left_BUSINESSID",
+                "alias": ""
+            },
+            {
+                "column": "right_BUSINESSID",
+                "alias": ""
+            },
+            {
+                "column": "FUNERALID",
+                "alias": ""
+            },
+            {
+                "column": "FUNERALNAME",
+                "alias": ""
+            },
+            {
+                "column": "DEADNO",
+                "alias": ""
+            },
+            {
+                "column": "CORPSETYPR",
+                "alias": ""
+            },
+            {
+                "column": "DEADNAME",
+                "alias": ""
+            },
+            {
+                "column": "CARDTYPE",
+                "alias": ""
+            },
+            {
+                "column": "CARDNO",
+                "alias": ""
+            },
+            {
+                "column": "GENDER",
+                "alias": ""
+            },
+            {
+                "column": "AGE",
+                "alias": ""
+            },
+            {
+                "column": "NATION",
+                "alias": ""
+            },
+            {
+                "column": "DEATHTYPE",
+                "alias": ""
+            },
+            {
+                "column": "DEADSTATE",
+                "alias": ""
+            },
+            {
+                "column": "DEADTIME",
+                "alias": ""
+            },
+            {
+                "column": "DEADPLACE",
+                "alias": ""
+            },
+            {
+                "column": "ADDRESS",
+                "alias": ""
+            },
+            {
+                "column": "DEATHCERTIFYNO",
+                "alias": ""
+            },
+            {
+                "column": "ISSUEUNIT",
+                "alias": ""
+            },
+            {
+                "column": "DEATHCERTIFYTYPE",
+                "alias": ""
+            },
+            {
+                "column": "DEATHCERTIFYANNEX",
+                "alias": ""
+            },
+            {
+                "column": "CREMCERTIFYNO",
+                "alias": ""
+            },
+            {
+                "column": "CREMCERTIFYANNEX",
+                "alias": ""
+            },
+            {
+                "column": "CONTACTNAME",
+                "alias": ""
+            },
+            {
+                "column": "RELATIONSHIP",
+                "alias": ""
+            },
+            {
+                "column": "CONTACTPHONE",
+                "alias": ""
+            },
+            {
+                "column": "CONTACTTEL",
+                "alias": ""
+            },
+            {
+                "column": "CONTACTADDRESS",
+                "alias": ""
+            },
+            {
+                "column": "CONTACTID",
+                "alias": ""
+            },
+            {
+                "column": "COPYIDANNEX",
+                "alias": ""
+            },
+            {
+                "column": "UNITNAME",
+                "alias": ""
+            },
+            {
+                "column": "UNITPHONE",
+                "alias": ""
+            },
+            {
+                "column": "UNITADDRESS",
+                "alias": ""
+            },
+            {
+                "column": "REMARKS",
+                "alias": ""
+            },
+            {
+                "column": "ADDER",
+                "alias": ""
+            },
+            {
+                "column": "ADDERID",
+                "alias": ""
+            },
+            {
+                "column": "ADDUNIT",
+                "alias": ""
+            },
+            {
+                "column": "ADDUNITID",
+                "alias": ""
+            },
+            {
+                "column": "ADDTIME",
+                "alias": ""
+            },
+            {
+                "column": "DELFLAG",
+                "alias": ""
+            },
+            {
+                "column": "STREET",
+                "alias": ""
+            },
+            {
+                "column": "COUNTY",
+                "alias": ""
+            },
+            {
+                "column": "REGISTERFLAG",
+                "alias": ""
+            },
+            {
+                "column": "COUNTRY",
+                "alias": ""
+            },
+            {
+                "column": "PROVINCE",
+                "alias": ""
+            },
+            {
+                "column": "CITY",
+                "alias": ""
+            },
+            {
+                "column": "ARRIVE",
+                "alias": ""
+            },
+            {
+                "column": "HOUSEPROVINCE",
+                "alias": ""
+            },
+            {
+                "column": "HOUSECITY",
+                "alias": ""
+            },
+            {
+                "column": "HOUSECOUNTY",
+                "alias": ""
+            },
+            {
+                "column": "CARDNOINSTRUCTION",
+                "alias": ""
+            },
+            {
+                "column": "BIRTHDATE",
+                "alias": ""
+            },
+            {
+                "column": "ISSUEDATE",
+                "alias": ""
+            },
+            {
+                "column": "PREFERENTIALTYPE",
+                "alias": ""
+            },
+            {
+                "column": "ISMEMBER",
+                "alias": ""
+            },
+            {
+                "column": "CONTACTCARDTYPE",
+                "alias": ""
+            },
+            {
+                "column": "DEADPIC",
+                "alias": ""
+            }
+        ]
+    }
+],

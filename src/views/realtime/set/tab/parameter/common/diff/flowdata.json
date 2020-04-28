@@ -1,0 +1,21 @@
+[
+	{
+		"eventType": "StartEvent",
+		"id": "",
+		"name": "",
+		"quantifier": { "strategy": "ONE_OR_MORE", "from": 1, "to": 1 },
+		"loopingUntilCondition": { "column": "", "operator": "", "expectedValue": "" },
+		"loopingContiguity": "CONSECUTIVE",
+		"loopingGreedy": "GREEDY",
+		"skipStrategy": "NO_SKIP",
+		"skipToPatternName": ""
+	},
+	{
+		"eventType": "ConditionEvent",
+		"id": "",
+		"name": "",
+		"quantifier": { "strategy": "ONE_OR_MORE", "from": 1, "to": 1 },
+		"loopingContiguity": "CONSECUTIVE",
+		"loopingGreedy": "GREEDY"
+	}
+]

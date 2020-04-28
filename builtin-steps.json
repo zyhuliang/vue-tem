@@ -1,0 +1,1954 @@
+{
+    "complexTypes": {
+        "fields": [
+            {
+                "name": "string",
+                "type": "string?options=string,byte,short,bigint,int,float,double,boolean,timestamp,binary",
+                "alias": "string"
+            }
+        ]
+    },
+    "steps": [
+        {
+            "id": "spark_source",
+            "tags": [
+                "IO",
+                "dataflow"
+            ],
+            "type": "source",
+            "outputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "otherConfigurations": {
+                "dataset": "",
+				"interceptor":"",
+                "sessionCache":""
+            }
+        },
+        {
+            "id": "spark_sqlsource",
+            "tags": [
+                "IO",
+                "dataflow"
+            ],
+            "type": "sqlsource",
+            "name": "sqlsource",
+            "inputConfigurations": [ ],
+            "outputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "otherConfigurations": {
+                "sql": "",
+				"interceptor":"",
+				"sessionCache":""
+            }
+        },
+
+        {
+            "id": "backend",
+            "tags": [
+                "IO",
+                "dataflow"
+            ],
+            "type": "backend",
+            "inputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "outputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "otherConfigurations": {
+                
+                "dataflowId$": "backend",
+                "serviceType":"",
+                "collect_id": "",
+                "collect_name": "",
+                "count_type":"",
+                "count_obj_id":"",
+                "count_obj_name":"",
+                "count_store_name":"",
+                "count_store_id":"",
+                "count_metric":"",
+                "index_dataset_id":"",
+                "index_dataset_name":"",
+                "index_columns":"",
+                "index_store_id":"",
+                "index_store_name":"",
+                "quality_zmod_id":"",
+                "quality_zmod_name":"",
+                "quality_store_name":"",
+                "quality_store_id":"",
+                "dataset":"",
+                "index_type":"",
+                "index_obj_id":"",
+                "index_obj_name":""
+            }
+        },
+        {
+            "id": "spark_decision",
+            "tags": [
+                "Gateway",
+                "dataflow"
+            ],
+            "type": "decision",
+            "inputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "outputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "otherConfigurations": {
+                "condition": "",
+                "interceptor": "",
+                "sessionCache": ""
+            }
+        },
+        {
+            "id": "spark_validate",
+            "tags": [
+                "Gateway",
+                "dataflow"
+            ],
+            "type": "validate",
+            "inputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "outputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "otherConfigurations": {
+                "validationRules": [
+                    {
+                        "name": "",
+                        "expression": ""
+                    }
+                ],
+                "action": "",
+                "showDetails": "",
+                "detailColumn": "errorInfo",
+                "interceptor": "",
+                "sessionCache": ""
+            }
+        },
+        {
+            "id": "spark_sql",
+            "tags": [
+                "Transform",
+                "dataflow"
+            ],
+            "type": "sql",
+            "inputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "outputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "otherConfigurations": {
+                "sql": "",
+                "interceptor": "",
+                "sessionCache": ""
+            }
+        },
+        {
+            "id": "sample",
+			"tags" : ["Transform", "dataflow"],
+            "type": "sample",
+            "name": "sample",
+            "inputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "outputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "otherConfigurations": {
+                "withReplacement": "false",
+                "fraction": "0.2",
+                "interceptor": "string"
+            }
+        },
+        {
+            "id": "spark_transform",
+            "tags": [
+                "Transform",
+                "dataflow"
+            ],
+            "type": "transform",
+            "inputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "outputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "otherConfigurations": {
+                "expressions": [],
+                "interceptor": "",
+                "sessionCache": ""
+            }
+        },
+        {
+            "id": "spark_cache",
+            "tags": [
+                "mapping",
+                "dataflow"
+            ],
+            "type": "cache",
+            "name": "lookupTable",
+            "inputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "outputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "otherConfigurations": {
+                "dataset": "",
+                "schema": "",
+                "keyColumn": "",
+                "valueColumns": [],
+                "engine": "MapDB",
+                "path": "",
+                "url": "",
+                "key": "",
+                "password": "",
+                "cacheName": "",
+                "singleRowCache": "true",
+                "interceptor": "",
+                "sessionCache": ""
+            }
+        },
+        {
+            "id": "spark_lookup",
+            "tags": [
+                "Join",
+                "dataflow"
+            ],
+            "type": "lookup",
+            "inputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "outputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "otherConfigurations": {
+                "mode": "",
+                "ruleSettings": [
+                    {
+                        "tabName": "Set_1",
+                        "dataset": "",
+                        "datasetId": "",
+                        "schema": "",
+                        "schemaId": "",
+                        "inputKeyColumn": "",
+                        "valueColumns": [
+                            {
+                                "name": "",
+                                "alias": "",
+                                "defaultNoMatch": "",
+                                "defaultNullKey": ""
+                            }
+                        ],
+                        "interceptor": "",
+                        "sessionCache": ""
+                    }
+                ]
+            }
+        },
+        {
+            "id": "spark_aggregate",
+            "tags": [
+                "Group",
+                "dataflow"
+            ],
+            "type": "aggregate",
+            "inputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "outputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "otherConfigurations": {
+                "groupBy": [],
+                "aggregations": [
+                    {
+                        "column": "",
+                        "function": "",
+                        "alias": ""
+                    }
+                ]
+            }
+        },
+        {
+            "id": "spark_filter",
+            "tags": [
+                "Transform",
+                "dataflow"
+            ],
+            "type": "filter",
+            "inputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "outputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "otherConfigurations": {
+                "condition": "",
+                "interceptor": "",
+                "sessionCache": ""
+            }
+        },
+        {
+            "id": "spark_supplement",
+            "tags": [
+                "Gateway",
+                "dataflow"
+            ],
+            "type": "supplement",
+            "inputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "outputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "otherConfigurations": {
+                "supplementSchema": "",
+                "interceptor": "",
+                "sessionCache": ""
+            }
+        },
+        {
+            "id": "spark_union",
+            "tags": [
+                "Set",
+                "dataflow"
+            ],
+            "type": "union",
+            "inputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "outputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "otherConfigurations": {
+                "distinct": "false",
+                "interceptor": "",
+                "sessionCache": ""
+            }
+        },
+        {
+            "id": "spark_intersect",
+            "tags": [
+                "Set",
+                "dataflow"
+            ],
+            "type": "intersect",
+            "inputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "outputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "otherConfigurations": {}
+        },
+        {
+            "id": "spark_minus",
+            "tags": [
+                "Set",
+                "dataflow"
+            ],
+            "type": "minus",
+            "inputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "outputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "otherConfigurations": {}
+        },
+        {
+            "id": "spark_top",
+            "tags": [
+                "Group",
+                "dataflow"
+            ],
+            "type": "top",
+            "inputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "outputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "otherConfigurations": {
+                "limitType": "ROW_COUNT",
+                "limit": "",
+                "groupBy": [],
+                "orderBy": [],
+                "interceptor": "",
+                "sessionCache": ""
+            }
+        },
+        {
+            "id": "spark_join",
+            "tags": [
+                "Join",
+                "dataflow"
+            ],
+            "type": "join",
+            "inputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "outputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "otherConfigurations": {
+                "joinType": "",
+                "joinConditions": [],
+                "interceptor": "",
+                "sessionCache": ""
+            }
+        },
+        {
+            "id": "spark_starjoin",
+            "tags": [
+                "Join",
+                "dataflow"
+            ],
+            "type": "starjoin",
+            "inputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "outputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "otherConfigurations": {
+                "factTable": "",
+                "joinConditions": [
+                    {
+                        "tableName": "",
+                        "dimColumn": "",
+                        "factColumn": ""
+                    }
+                ],
+                "interceptor": "",
+                "sessionCache": ""
+            }
+        },
+        {
+            "id": "spark_productjoin",
+            "tags": [
+                "Join",
+                "dataflow"
+            ],
+            "type": "productjoin",
+            "inputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "outputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "otherConfigurations": {}
+        },
+        {
+            "id": "spark_split",
+            "tags": [
+                "Set",
+                "dataflow"
+            ],
+            "type": "split",
+            "inputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "outputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "otherConfigurations": {
+                "condition": "",
+				"interceptor":"",
+				"sessionCache":""
+            }
+        },
+        {
+            "id": "spark_sink",
+            "tags": [
+                "IO",
+                "dataflow"
+            ],
+            "type": "sink",
+            "inputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "outputConfigurations": [ ],
+            "otherConfigurations": {
+                "dataset": "",
+                "schema": "",
+                "type": "HDFS",
+                "format": "csv",
+                "separator": ",",
+                "quoteChar": "\"",
+                "escapeChar": "\\",
+                "path": "",
+                "table": "",
+                "url": "",
+                "user": "",
+                "password": "",
+                "partitionColumns": "",
+                "driver": "",
+                "specifiedStringColumnTypes": [],
+                "brokers": "",
+                "topic": "",
+                "groupId": "",
+                "namespace": "",
+                "columns": "",
+                "description": "",
+                "mode": "",
+                "expiredTime": "0",
+                "nullValue": "",
+                "maxFileSize": "",
+                "maxFileNumber": "",
+                "sliceTimeColumn": "",
+                "sliceType": "",
+                "interceptor": "",
+                "sessionCache": "",
+                "src":"",
+                "edge":"",
+                "target":"",
+                "sourceFields":[],
+                "edgeFields":[],
+                "targetFields":[],
+                "accessKey": "",
+                "secretKey": "",
+                "endpoint": ""
+            }
+        },
+        {
+            "id": "spark_linearleastsquares_predict",
+            "tags": [
+                "Datamining",
+                "dataflow"
+            ],
+            "type": "regression_linearleastsquares_predict",
+            "inputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "outputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "otherConfigurations": {
+                "modelPath": "",
+                "featureColumns":[],
+                "labelColumn":""
+            }
+        },
+        {
+            "id": "spark_linearleastsquares_train",
+            "tags": [
+                "Datamining",
+                "dataflow"
+            ],
+            "type": "regression_linearleastsquares_train",
+            "inputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "outputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "otherConfigurations": {
+                "stepSize": "1.0",
+                "trainIteration":"100",
+                "miniBatchFraction":"1.0",
+                "modelPath":"",
+                "trainPortion":"0.7",
+                "featureColumns":[],
+                "labelColumn":"score"
+            }
+        },
+        {
+            "id": "spark_RandomForestPredictStep",
+            "tags": [
+                "Datamining",
+                "dataflow"
+            ],
+            "type": "classification_randomforest_predict",
+            "inputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "outputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "otherConfigurations": {
+                "modelPath": "",
+                "featureColumns": [],
+                "labelColumn": ""
+            }
+        },
+        {
+            "id": "spark_RandomForestTrainStep",
+            "tags": [
+                "Datamining",
+                "dataflow"
+            ],
+            "type": "classification_randomforest_train",
+            "inputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "outputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "otherConfigurations": {
+                "modelType": "classification",
+                "numClasses": "2",
+                "numTrees": "1",
+                "impurity": "gini",
+                "maxDepth": "1",
+                "maxBins": "1",
+                "trainPortion": "0.7",
+                "featureColumns": [],
+                "labelColumn": "",
+                "featureSubsetStrategy": "auto",
+                "categoricalFeaturesInfo": [
+                    {
+                        "featureColumn": "",
+                        "categories": ""
+                    }
+                ]
+            }
+        },
+        {
+            "id": "spark_fpgrowth",
+            "tags": [
+                "Datamining",
+                "dataflow"
+            ],
+            "type": "frequentpattern_fpgrowth",
+            "inputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "outputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "otherConfigurations": {
+                "minSupport": "0.3",
+                "numPartitions": "1",
+                "patternColumn": "",
+                "frequencyColumn": ""
+            }
+        },
+        {
+            "id": "spark_LogisticRegressionPredict",
+            "tags": [
+                "Datamining",
+                "dataflow"
+            ],
+            "type": "classification_logisticregression_predict",
+            "inputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "outputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "otherConfigurations": {
+                "modelPath": "",
+                "featureColumns": [],
+                "labelColumn": ""
+            }
+        },
+        {
+            "id": "spark_LogisticRegressionTrain",
+            "tags": [
+                "Datamining",
+                "dataflow"
+            ],
+            "type": "classification_logisticregression_train",
+            "inputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "outputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "otherConfigurations": {
+                "numClasses": "2",
+                "trainIteration": "1",
+                "regType": "",
+                "regParam": "",
+                "modelPath": "",
+                "trainPortion": "0.7",
+                "featureColumns": [],
+                "labelColumn": "score"
+            }
+        },
+        {
+            "id": "classification_gradientboostedtrees_predict",
+            "tags": [
+                "Datamining",
+                "dataflow"
+            ],
+            "type": "classification_gradientboostedtrees_predict",
+            "inputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "outputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "otherConfigurations": {
+                "modelPath": "",
+                "featureColumns": [],
+                "labelColumn": "",
+                "runMode": "predict",
+                "interceptor": "string"
+            }
+        },
+        {
+            "id": "classification_gradientboostedtrees_train",
+            "tags": [
+                "Datamining",
+                "dataflow"
+            ],
+            "type": "classification_gradientboostedtrees_train",
+            "inputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "outputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "otherConfigurations": {
+                "numIterations": "5",
+                "learningRate": "0.1",
+                "loss": "logLoss",
+                "impurity": "gini",
+                "maxDepth": "5",
+                "maxBins": "32",
+                "modelPath": "",
+                "trainPortion": "0.7",
+                "featureColumns": [],
+                "labelColumn": "label",
+                "interceptor": "string",
+                "modelType": "classification",
+                "runMode": "train",
+                "trainPortion": "0.7"
+            }
+        },
+        {
+            "id": "classification_decisiontree_train",
+            "tags": [
+                "Datamining",
+                "dataflow"
+            ],
+            "type": "classification_decisiontree_train",
+            "inputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "outputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "otherConfigurations": {
+                "modelType": "classification",
+                "runMode": "train",
+                "numClasses": "",
+                "categoricalFeaturesInfo": [
+                    {
+                        "featureColumn": "",
+                        "categories": ""
+                    }
+                ],
+                "impurity": "gini",
+                "maxDepth": "5",
+                "maxBins": "32",
+                "trainPortion": "0.7",
+                "modelPath": "",
+                "featureColumns": [],
+                "labelColumn": "label"
+            }
+        },
+        {
+            "id": "classification_decisiontree_predict",
+            "tags": [
+                "Datamining",
+                "dataflow"
+            ],
+            "type": "classification_decisiontree_predict",
+            "inputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "outputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "otherConfigurations": {
+                "modelPath": "",
+                "featureColumns": [],
+                "labelColumn": "",
+                "runMode": "predict",
+                "interceptor": "string"
+            }
+        },
+        {
+            "id": "spark_clustering_kmeans_predict",
+            "tags": [
+                "Datamining",
+                "dataflow"
+            ],
+            "type": "clustering_kmeans_predict",
+            "inputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "outputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "otherConfigurations": {
+                "modelPath": "",
+                "featureColumns": [],
+                "clusterIdColumn": "",
+                "runMode": "predict",
+                "interceptor": "string"
+            }
+        },
+        {
+            "id": "spark_clustering_kmeans_train",
+            "tags": [
+                "Datamining",
+                "dataflow"
+            ],
+            "type": "clustering_kmeans_train",
+            "inputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "outputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "otherConfigurations": {
+                "modelPath": "",
+                "k": "2",
+                "maxIterations": "20",
+                "runs": "3",
+                "epsilon": "3.0",
+                "initializationMode": "k-means||",
+                "initializationSteps": "5",
+                "featureColumns": [],
+                "interceptor": "string",
+                "runMode": "train"
+            }
+        },
+        {
+            "id": "spark_naivebayes_predict",
+            "tags": [
+                "Datamining",
+                "dataflow"
+            ],
+            "type": "classification_naivebayes_predict",
+            "inputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "outputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "otherConfigurations": {
+                "modelPath": "",
+                "featureColumns": [],
+                "labelColumn": ""
+            }
+        },
+        {
+            "id": "spark_naivebayes_train",
+            "tags": [
+                "Datamining",
+                "dataflow"
+            ],
+            "type": "classification_naivebayes_train",
+            "inputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "outputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "otherConfigurations": {
+                "modelType": "",
+                "modelPath": "",
+                "trainPortion": "0.6",
+                "featureColumns": [],
+                "labelColumn": "label"
+            }
+        },
+        {
+            "id": "exclusive",
+            "tags": [
+                "Gateway",
+                "workflow"
+            ],
+            "type": "exclusive",
+            "inputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "outputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "otherConfigurations": {
+                "conditions": [
+                    {
+                        "output": "",
+                        "condition": ""
+                    }
+                ]
+            }
+        },
+        {
+            "id": "parallel",
+            "tags": [
+                "Gateway",
+                "workflow"
+            ],
+            "type": "parallel",
+            "inputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "outputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "otherConfigurations": {
+                "conditions": [
+                    {
+                        "output": "",
+                        "condition": ""
+                    }
+                ]
+            }
+        },
+        {
+            "id": "shell",
+            "tags": [
+                "Process",
+                "workflow"
+            ],
+            "type": "shell",
+            "inputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "outputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "otherConfigurations": {
+                "workingDiretory": "/tmp",
+                "command": "/bin/sh -c 'echo 'good' > /tmp/good'",
+                "dataflowId$": "shell"
+            }
+        },
+        {
+            "id": "spark",
+            "tags": [
+                "Process",
+                "workflow"
+            ],
+            "type": "spark",
+            "inputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "outputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "otherConfigurations": {
+                "workingDiretory": "/tmp",
+                "dataflowId$": "spark",
+                "logFile": "/tmp/output-${ENV.TASK.ID}.log",
+                "sparkHome": "/usr/hdp/current/spark-client",
+                "master": "yarn",
+                "deploymode": "client",
+                "applicationJar": "${spark.home}/lib/spark-examples-1.6.1-hadoop2.6.0.jar",
+                "applicationClass": "org.apache.spark.examples.SparkPi",
+                "applicationArgs": "1000",
+                "queue": "default",
+                "driverMemory": "512M",
+                "executorMemory": "1G",
+                "numExecutors": "2",
+                "executorCores": "2"
+            }
+        },
+        {
+            "id": "hive",
+            "tags": [
+                "Process",
+                "workflow"
+            ],
+            "type": "hive",
+            "inputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "outputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "otherConfigurations": {
+                "workingDiretory": "/tmp",
+                "dataflowId$": "hive",
+                "hive_cmd": "/usr/bin/hive",
+                "database": "default",
+                "logFile": "/tmp/hive-output.log",
+                "sql": "select 1"
+            }
+        },
+        {
+            "id": "hawq",
+            "tags": [
+                "Process",
+                "workflow"
+            ],
+            "type": "hawq",
+            "inputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "outputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "otherConfigurations": {
+                "workingDiretory": "/tmp",
+                "dataflowId$": "hawq",
+                "hawq_cmd": "/usr/local/hawq/bin/psql",
+                "host": "node1",
+                "port": "5432",
+                "user": "gpadmin",
+                "database": "gpadmin",
+                "logFile": "/tmp/hawq-output.log",
+                "sql": "select 1"
+            }
+        },
+        {
+            "id": "mapreduce",
+            "tags": [
+                "Process",
+                "workflow"
+            ],
+            "type": "mapreduce",
+            "inputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "outputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "otherConfigurations": {
+                "workingDiretory": "/tmp",
+                "dataflowId$": "mapreduce",
+                "hadoop_cmd": "/usr/bin/hadoop",
+                "jarFile": "/tmp/hadoop-mapreduce-examples-2.2.0.jar",
+                "logFile": "/tmp/hive-output.log",
+                "program": "wordcount",
+                "arguments": "/usr/joe/wordcount/input /usr/joe/wordcount/output"
+            }
+        },
+        {
+            "id": "dataflow",
+            "tags": [
+                "Process",
+                "workflow"
+            ],
+            "type": "dataflow",
+            "inputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "outputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "otherConfigurations": {
+                "dataflowId$": ""
+            }
+        },
+        {
+            "id": "event",
+            "tags": [
+                "Gateway",
+                "workflow"
+            ],
+            "type": "event",
+            "inputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "outputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "otherConfigurations": {
+                "cron": "",
+                "filterClass": "",
+                "parameter": ""
+            }
+        },
+        {
+            "id": "source_str",
+            "tags": [
+                "IO",
+                "streamflow"
+            ],
+            "type": "source",
+            "outputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "otherConfigurations": {
+                "dataset": "",
+                "interceptor": "",
+                "sessionCache": ""
+            }
+        },
+        {
+            "id": "streaming_source",
+            "tags": [
+                "IO",
+                "streamflow"
+            ],
+            "type": "streaming_source",
+            "outputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "otherConfigurations": {
+                "engine": "",
+                "brokers": "",
+                "topic": "",
+                "format": "csv",
+                "quoteChar": "\"",
+                "escapeChar": "\\",
+                "delimiter": " ",
+                "watermark": {
+                    "watermarkColumn": "",
+                    "watermarkInterval": ""
+                },
+                "startingOffsets": "latest"
+
+            }
+        },
+        {
+            "id": "streaming_decision",
+            "tags": [
+                "Gateway",
+                "streamflow"
+            ],
+            "type": "decision",
+            "inputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "outputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "otherConfigurations": {
+                "condition": "",
+                "interceptor": "",
+                "sessionCache": ""
+            }
+        },
+        {
+            "id": "streaming_validate",
+            "tags": [
+                "Gateway",
+                "streamflow"
+            ],
+            "type": "validate",
+            "inputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "outputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "otherConfigurations": {
+                "validationRules": [
+                    {
+                        "name": "",
+                        "expression": ""
+                    }
+                ],
+                "action": "",
+                "showDetails": "",
+                "detailColumn": "errorInfo",
+                "interceptor": "",
+                "sessionCache": ""
+            }
+        },
+        {
+            "id": "streaming_sql",
+            "tags": [
+                "Transform",
+                "streamflow"
+            ],
+            "type": "sql",
+            "inputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "outputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "otherConfigurations": {
+                "sql": "",
+                "interceptor": "",
+                "sessionCache": ""
+            }
+        },
+        {
+            "id": "streaming_sample",
+            "tags": [
+                "Transform",
+                "streamflow"
+            ],
+            "type": "sample",
+            "name": "sample",
+            "inputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "outputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "otherConfigurations": {
+                "withReplacement": "false",
+                "fraction": "0.2",
+                "interceptor": "string"
+            }
+        },
+        {
+            "id": "streaming_transform",
+            "tags": [
+                "Transform",
+                "streamflow"
+            ],
+            "type": "transform",
+            "inputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "outputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "otherConfigurations": {
+                "expressions": [],
+                "interceptor": "",
+                "sessionCache": ""
+            }
+        },
+        {
+            "id": "streaming_lookup",
+            "tags": [
+                "Join",
+                "streamflow"
+            ],
+            "type": "lookup",
+            "inputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "outputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "otherConfigurations": {
+                "mode": "",
+                "ruleSettings": [
+                    {
+                        "tabName": "Set_1",
+                        "dataset": "",
+                        "datasetId": "",
+                        "schema": "",
+                        "schemaId": "",
+                        "inputKeyColumn": "",
+                        "valueColumns": [
+                            {
+                                "name": "",
+                                "alias": "",
+                                "defaultNoMatch": "",
+                                "defaultNullKey": ""
+                            }
+                        ],
+                        "interceptor": "",
+                        "sessionCache": ""
+                    }
+                ]
+            }
+        },
+        {
+            "id": "streaming_aggregate",
+            "tags": [
+                "Group",
+                "streamflow"
+            ],
+            "type": "aggregate",
+            "inputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "outputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "otherConfigurations": {
+                "watermark":
+                    {"watermarkColumn": "",
+                     "watermarkInterval": ""},
+                "windowFunc":
+                    {  "timeColumn": "",
+                    "windowDuration": "",
+                    "slideDuration": ""
+                },
+                "groupBy": [],
+                "aggregations": []
+            }
+        },
+        {
+            "id": "streaming_filter",
+            "tags": [
+                "Transform",
+                "streamflow"
+            ],
+            "type": "filter",
+            "inputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "outputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "otherConfigurations": {
+                "condition": "",
+                "interceptor": "",
+                "sessionCache": ""
+            }
+        },
+        {
+            "id": "streaming_union",
+            "tags": [
+                "Set",
+                "streamflow"
+            ],
+            "type": "union",
+            "inputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "outputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "otherConfigurations": {
+                "distinct": "false",
+                "interceptor": "",
+                "sessionCache": ""
+            }
+        },
+        {
+            "id": "streaming_intersect",
+            "tags": [
+                "Set",
+                "streamflow"
+            ],
+            "type": "intersect",
+            "inputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "outputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "otherConfigurations": {}
+        },
+        {
+            "id": "streaming_minus",
+            "tags": [
+                "Set",
+                "streamflow"
+            ],
+            "type": "minus",
+            "inputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "outputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "otherConfigurations": {}
+        },
+        {
+            "id": "streaming_join",
+            "tags": [
+                "Join",
+                "streamflow"
+            ],
+            "type": "join",
+            "inputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "outputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "otherConfigurations": {
+                "joinType": "",
+                "joinConditions": [],
+				"interceptor":"",
+                "sessionCache":""
+            }
+        },
+        {
+            "id": "streaming_starjoin",
+            "tags": [
+                "Join",
+                "streamflow"
+            ],
+            "type": "starjoin",
+            "inputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "outputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "otherConfigurations": {
+                "factTable": "",
+                "joinConditions": [
+                    {
+						"tableName": "",
+                        "dimColumn": "",
+                        "factColumn": ""
+                    }
+                ],
+				"interceptor":"",
+				"sessionCache":""
+            }
+        },
+        {
+            "id": "streaming_productjoin",
+            "tags": [
+                "Join",
+                "streamflow"
+            ],
+            "type": "productjoin",
+            "inputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "outputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "otherConfigurations": { }
+        },
+        {
+            "id": "streaming_split",
+            "tags": [
+                "Set",
+                "streamflow"
+            ],
+            "type": "split",
+            "inputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "outputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "otherConfigurations": {
+                "condition": "",
+				"interceptor":"",
+				"sessionCache":""
+            }
+        },
+        {
+            "id": "streaming_deduplication",
+            "tags": [
+                "Set",
+                "streamflow"
+            ],
+            "type": "deduplication",
+            "inputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "outputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "otherConfigurations": {
+                "columns": [],
+				"interceptor":"",
+                "sessionCache":"",
+                "watermark": {
+                    "watermarkColumn": "",
+                    "watermarkInterval": ""
+                }
+            }
+        },
+        {
+            "id": "streaming_sink",
+            "tags": [
+                "IO",
+                "streamflow"
+            ],
+            "type": "sink",
+            "inputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "outputConfigurations": [ ],
+            "otherConfigurations": {
+                "outputMode": "",
+                "trigger": "",
+                "dataset": "",
+                "schema": "",
+                "type": "HDFS",
+                "format": "csv",
+                "separator": ",",
+                "quoteChar": "\"",
+                "escapeChar": "\\",
+                "path": "",
+                "table": "",
+                "url": "",
+                "user": "",
+                "password": "",
+                "partitionColumns": "",
+                "driver": "",
+                "specifiedStringColumnTypes": [],
+                "brokers": "",
+                "topic": "",
+                "groupId": "",
+                "namespace": "",
+                "columns": "",
+                "description": "",
+                "mode": "",
+                "expiredTime": "0",
+                "nullValue": "",
+                "maxFileSize": "",
+                "maxFileNumber": "",
+                "sliceTimeColumn": "",
+                "sliceType": "",
+				"interceptor":"",
+                "sessionCache":"",
+                "checkpointLocation": ""
+            }
+        },
+        {
+            "id": "define_streamflow",
+            "tags": [
+                "define",
+                "streamflow"
+            ],
+            "type": "definestep",
+            "inputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "outputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "otherConfigurations": {
+                "columns": "",
+				"interceptor":"",
+                "sessionCache":"",
+                "watermark": {
+                    "watermarkColumn": "",
+                    "watermarkInterval": ""
+                }
+            }
+        },
+        {
+            "id": "define_dataflow",
+            "tags": [
+                "define",
+                "dataflow"
+            ],
+            "type": "definestep",
+            "inputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "outputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "otherConfigurations": {
+                "columns": "",
+				"interceptor":"",
+                "sessionCache":"",
+                "watermark": {
+                    "watermarkColumn": "",
+                    "watermarkInterval": ""
+                }
+            }
+        },
+        {
+            "id": "define_workflow",
+            "tags": [
+                "define",
+                "workflow"
+            ],
+            "type": "definestep",
+            "inputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "outputConfigurations": [
+                {
+                    "id": "",
+                    "fields": []
+                }
+            ],
+            "otherConfigurations": {
+                "columns": "",
+				"interceptor":"",
+                "sessionCache":"",
+                "watermark": {
+                    "watermarkColumn": "",
+                    "watermarkInterval": ""
+                }
+            }
+        }
+    ]
+}

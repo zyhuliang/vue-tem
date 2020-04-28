@@ -1,0 +1,566 @@
+{
+    "newName": "二级索引",
+    "inputData": [
+        {
+            "id": "input",
+            "fields": [
+                {
+                    "column": "MZBZXX0101",
+                    "alias": ""
+                },
+                {
+                    "column": "MZBZXX0102",
+                    "alias": ""
+                },
+                {
+                    "column": "MZBZXX0104",
+                    "alias": ""
+                },
+                {
+                    "column": "MZBZXX0105",
+                    "alias": ""
+                },
+                {
+                    "column": "MZBZXX0106",
+                    "alias": ""
+                },
+                {
+                    "column": "MZBZXX0107",
+                    "alias": ""
+                },
+                {
+                    "column": "MZBZXX0109",
+                    "alias": ""
+                },
+                {
+                    "column": "MZBZXX0110",
+                    "alias": ""
+                },
+                {
+                    "column": "MZBZXX0111",
+                    "alias": ""
+                },
+                {
+                    "column": "MZBZXX0112",
+                    "alias": ""
+                },
+                {
+                    "column": "MZBZXX0114",
+                    "alias": ""
+                },
+                {
+                    "column": "MZBZXX0115",
+                    "alias": ""
+                },
+                {
+                    "column": "MZBZXX0116",
+                    "alias": ""
+                },
+                {
+                    "column": "MZBZXX0117",
+                    "alias": ""
+                },
+                {
+                    "column": "MZBZXX0118",
+                    "alias": ""
+                },
+                {
+                    "column": "MZBZXX0119",
+                    "alias": ""
+                },
+                {
+                    "column": "MZBZXX0120",
+                    "alias": ""
+                },
+                {
+                    "column": "MZBZXX0121",
+                    "alias": ""
+                },
+                {
+                    "column": "MZBZXX0122",
+                    "alias": ""
+                },
+                {
+                    "column": "MZBZXX0124",
+                    "alias": ""
+                },
+                {
+                    "column": "MZBZXX0125",
+                    "alias": ""
+                },
+                {
+                    "column": "MZBZXX0126",
+                    "alias": ""
+                },
+                {
+                    "column": "MZBZXX0127",
+                    "alias": ""
+                },
+                {
+                    "column": "MZBZXX0128",
+                    "alias": ""
+                },
+                {
+                    "column": "MZBZXX0129",
+                    "alias": ""
+                },
+                {
+                    "column": "MZBZXX0130",
+                    "alias": ""
+                },
+                {
+                    "column": "MZBZXX0131",
+                    "alias": ""
+                },
+                {
+                    "column": "MZBZXX0132",
+                    "alias": ""
+                },
+                {
+                    "column": "MZBZXX0133",
+                    "alias": ""
+                },
+                {
+                    "column": "MZBZXX0134",
+                    "alias": ""
+                },
+                {
+                    "column": "MZBZXX0135",
+                    "alias": ""
+                },
+                {
+                    "column": "MZBZXX0136",
+                    "alias": ""
+                },
+                {
+                    "column": "MZBZXX0137",
+                    "alias": ""
+                },
+                {
+                    "column": "MZBZXX0138",
+                    "alias": ""
+                },
+                {
+                    "column": "MZBZXX0139",
+                    "alias": ""
+                },
+                {
+                    "column": "MZBZXX0140",
+                    "alias": ""
+                },
+                {
+                    "column": "inserttime",
+                    "alias": ""
+                },
+                {
+                    "column": "MZBZXX0103",
+                    "alias": ""
+                },
+                {
+                    "column": "MZBZXX0108",
+                    "alias": ""
+                },
+                {
+                    "column": "MZBZXX0113",
+                    "alias": ""
+                },
+                {
+                    "column": "MZBZXX0123",
+                    "alias": ""
+                }
+            ]
+        }
+    ],
+    "outputData": [],
+    "nodeSetTab": [
+        {
+            "title": "输入（标准转换）",
+            "name": "input",
+            "icon": "fa fa-sign-in"
+        },
+        {
+            "title": "参数",
+            "name": "parameter",
+            "icon": "fa fa-gear"
+        },
+        {
+            "title": "输出",
+            "name": "output",
+            "icon": "fa fa-sign-out"
+        }
+    ],
+    "thisNodeData": {
+        "id": "transform_10",
+        "name": "二级索引",
+        "type": "transform",
+        "x": 348,
+        "y": 424,
+        "otherConfigurations": {
+            "sessionCache": "",
+            "interceptor": "",
+            "expressions": [
+                "CONCAT(MZBZXX0102,'-', MZBZXX0103,'-',MZBZXX0104,'-',MZBZXX0106) as tmprowkey",
+                "'MZBZXX0102-MZBZXX0103-MZBZXX0104-MZBZXX0106' as rowkeyname"
+            ]
+        },
+        "inputConfigurations": [
+            {
+                "id": "input",
+                "fields": [
+                    {
+                        "column": "MZBZXX0101",
+                        "alias": ""
+                    },
+                    {
+                        "column": "MZBZXX0120",
+                        "alias": ""
+                    },
+                    {
+                        "column": "MZBZXX0128",
+                        "alias": ""
+                    },
+                    {
+                        "column": "MZBZXX0129",
+                        "alias": ""
+                    },
+                    {
+                        "column": "MZBZXX0106",
+                        "alias": ""
+                    },
+                    {
+                        "column": "MZBZXX0104",
+                        "alias": ""
+                    },
+                    {
+                        "column": "MZBZXX0111",
+                        "alias": ""
+                    },
+                    {
+                        "column": "MZBZXX0114",
+                        "alias": ""
+                    },
+                    {
+                        "column": "MZBZXX0115",
+                        "alias": ""
+                    },
+                    {
+                        "column": "MZBZXX0110",
+                        "alias": ""
+                    },
+                    {
+                        "column": "MZBZXX0118",
+                        "alias": ""
+                    },
+                    {
+                        "column": "MZBZXX0119",
+                        "alias": ""
+                    },
+                    {
+                        "column": "MZBZXX0117",
+                        "alias": ""
+                    },
+                    {
+                        "column": "MZBZXX0109",
+                        "alias": ""
+                    },
+                    {
+                        "column": "MZBZXX0140",
+                        "alias": ""
+                    },
+                    {
+                        "column": "MZBZXX0105",
+                        "alias": ""
+                    },
+                    {
+                        "column": "MZBZXX0102",
+                        "alias": ""
+                    },
+                    {
+                        "column": "MZBZXX0107",
+                        "alias": ""
+                    },
+                    {
+                        "column": "MZBZXX0112",
+                        "alias": ""
+                    },
+                    {
+                        "column": "MZBZXX0122",
+                        "alias": ""
+                    },
+                    {
+                        "column": "MZBZXX0121",
+                        "alias": ""
+                    },
+                    {
+                        "column": "MZBZXX0116",
+                        "alias": ""
+                    },
+                    {
+                        "column": "MZBZXX0124",
+                        "alias": ""
+                    },
+                    {
+                        "column": "MZBZXX0125",
+                        "alias": ""
+                    },
+                    {
+                        "column": "MZBZXX0126",
+                        "alias": ""
+                    },
+                    {
+                        "column": "MZBZXX0127",
+                        "alias": ""
+                    },
+                    {
+                        "column": "MZBZXX0130",
+                        "alias": ""
+                    },
+                    {
+                        "column": "MZBZXX0131",
+                        "alias": ""
+                    },
+                    {
+                        "column": "MZBZXX0132",
+                        "alias": ""
+                    },
+                    {
+                        "column": "MZBZXX0133",
+                        "alias": ""
+                    },
+                    {
+                        "column": "MZBZXX0134",
+                        "alias": ""
+                    },
+                    {
+                        "column": "MZBZXX0135",
+                        "alias": ""
+                    },
+                    {
+                        "column": "MZBZXX0136",
+                        "alias": ""
+                    },
+                    {
+                        "column": "MZBZXX0137",
+                        "alias": ""
+                    },
+                    {
+                        "column": "MZBZXX0138",
+                        "alias": ""
+                    },
+                    {
+                        "column": "MZBZXX0139",
+                        "alias": ""
+                    },
+                    {
+                        "column": "MZBZXX0103",
+                        "alias": ""
+                    },
+                    {
+                        "column": "MZBZXX0108",
+                        "alias": ""
+                    },
+                    {
+                        "column": "MZBZXX0113",
+                        "alias": ""
+                    },
+                    {
+                        "column": "MZBZXX0123",
+                        "alias": ""
+                    }
+                ]
+            }
+        ],
+        "outputConfigurations": [
+            {
+                "id": "output",
+                "fields": [
+                    {
+                        "column": "MZBZXX0101",
+                        "alias": ""
+                    },
+                    {
+                        "column": "MZBZXX0120",
+                        "alias": ""
+                    },
+                    {
+                        "column": "MZBZXX0128",
+                        "alias": ""
+                    },
+                    {
+                        "column": "MZBZXX0129",
+                        "alias": ""
+                    },
+                    {
+                        "column": "MZBZXX0106",
+                        "alias": ""
+                    },
+                    {
+                        "column": "MZBZXX0104",
+                        "alias": ""
+                    },
+                    {
+                        "column": "MZBZXX0111",
+                        "alias": ""
+                    },
+                    {
+                        "column": "MZBZXX0114",
+                        "alias": ""
+                    },
+                    {
+                        "column": "MZBZXX0115",
+                        "alias": ""
+                    },
+                    {
+                        "column": "MZBZXX0110",
+                        "alias": ""
+                    },
+                    {
+                        "column": "MZBZXX0118",
+                        "alias": ""
+                    },
+                    {
+                        "column": "MZBZXX0119",
+                        "alias": ""
+                    },
+                    {
+                        "column": "MZBZXX0117",
+                        "alias": ""
+                    },
+                    {
+                        "column": "MZBZXX0109",
+                        "alias": ""
+                    },
+                    {
+                        "column": "MZBZXX0140",
+                        "alias": ""
+                    },
+                    {
+                        "column": "MZBZXX0105",
+                        "alias": ""
+                    },
+                    {
+                        "column": "MZBZXX0102",
+                        "alias": ""
+                    },
+                    {
+                        "column": "MZBZXX0107",
+                        "alias": ""
+                    },
+                    {
+                        "column": "MZBZXX0112",
+                        "alias": ""
+                    },
+                    {
+                        "column": "MZBZXX0122",
+                        "alias": ""
+                    },
+                    {
+                        "column": "MZBZXX0121",
+                        "alias": ""
+                    },
+                    {
+                        "column": "MZBZXX0116",
+                        "alias": ""
+                    },
+                    {
+                        "column": "MZBZXX0124",
+                        "alias": ""
+                    },
+                    {
+                        "column": "MZBZXX0125",
+                        "alias": ""
+                    },
+                    {
+                        "column": "MZBZXX0126",
+                        "alias": ""
+                    },
+                    {
+                        "column": "MZBZXX0127",
+                        "alias": ""
+                    },
+                    {
+                        "column": "MZBZXX0130",
+                        "alias": ""
+                    },
+                    {
+                        "column": "MZBZXX0131",
+                        "alias": ""
+                    },
+                    {
+                        "column": "MZBZXX0132",
+                        "alias": ""
+                    },
+                    {
+                        "column": "MZBZXX0133",
+                        "alias": ""
+                    },
+                    {
+                        "column": "MZBZXX0134",
+                        "alias": ""
+                    },
+                    {
+                        "column": "MZBZXX0135",
+                        "alias": ""
+                    },
+                    {
+                        "column": "MZBZXX0136",
+                        "alias": ""
+                    },
+                    {
+                        "column": "MZBZXX0137",
+                        "alias": ""
+                    },
+                    {
+                        "column": "MZBZXX0138",
+                        "alias": ""
+                    },
+                    {
+                        "column": "MZBZXX0139",
+                        "alias": ""
+                    },
+                    {
+                        "column": "MZBZXX0103",
+                        "alias": ""
+                    },
+                    {
+                        "column": "MZBZXX0108",
+                        "alias": ""
+                    },
+                    {
+                        "column": "MZBZXX0113",
+                        "alias": ""
+                    },
+                    {
+                        "column": "MZBZXX0123",
+                        "alias": ""
+                    },
+                    {
+                        "column": "tmprowkey",
+                        "alias": ""
+                    },
+                    {
+                        "column": "rowkeyname",
+                        "alias": ""
+                    }
+                ]
+            }
+        ]
+    },
+    "nodeLine": {
+        "inputLine": [
+            {
+                "lineNameSource": "transform_1"
+            }
+        ],
+        "outputLine": [
+            {
+                "lineNameTarget": "sink_11"
+            }
+        ]
+    },
+    "datasetType": "",
+    "flowData": {},
+    "nodeSetVisible": true,
+    "dbStatus": "1",
+    "oldName": "二级索引"
+}

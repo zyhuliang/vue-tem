@@ -1,0 +1,401 @@
+{
+  "newName": "split_0",
+  "inputData": [
+    {
+      "id": "input",
+      "fields": [
+        {
+          "column": "name",
+          "alias": ""
+        },
+        {
+          "column": "age",
+          "alias": ""
+        },
+        {
+          "column": "salary",
+          "alias": ""
+        }
+      ]
+    }
+  ],
+  "outputData": [],
+  "nodeSetTab": [
+    {
+      "title": "输入 (source_0)",
+      "name": "input",
+      "icon": "fa fa-sign-in",
+      "lable": "input"
+    },
+    {
+      "title": "参数",
+      "name": "parameter",
+      "icon": "fa fa-gear",
+      "lable": "parameter"
+    },
+    {
+      "title": "yes",
+      "name": "yes",
+      "icon": "fa fa-sign-out"
+    },
+    {
+      "title": "no",
+      "name": "no",
+      "icon": "fa fa-sign-out"
+    }
+  ],
+  "thisNodeData": {
+    "id": "split_0",
+    "name": "split_0",
+    "type": "split",
+    "x": 490,
+    "y": 132,
+    "otherConfigurations": {
+      "condition": "salary LIKE '%l'"
+    },
+    "inputConfigurations": [
+      {
+        "id": "input",
+        "fields": [
+          {
+            "column": "name"
+          },
+          {
+            "column": "age"
+          },
+          {
+            "column": "salary"
+          }
+        ]
+      }
+    ],
+    "outputConfigurations": [
+      {
+        "id": "yes",
+        "fields": [
+          {
+            "column": "name",
+            "alias": ""
+          },
+          {
+            "column": "age",
+            "alias": ""
+          },
+          {
+            "column": "salary",
+            "alias": ""
+          }
+        ]
+      },
+      {
+        "id": "no",
+        "fields": [
+          {
+            "column": "name",
+            "alias": ""
+          },
+          {
+            "column": "age",
+            "alias": ""
+          },
+          {
+            "column": "salary",
+            "alias": ""
+          }
+        ]
+      }
+    ]
+  },
+  "nodeLine": {
+    "inputLine": [],
+    "outputLine": []
+  },
+  "flowData": {
+    "id": "b51b5a8c-55da-41c7-8f4e-ab7f4b0857db",
+    "name": "test_dataflow_split",
+    "flowType": "dataflow",
+    "steps": [
+      {
+        "id": "source_0",
+        "name": "source_0",
+        "type": "source",
+        "x": 139,
+        "y": 77,
+        "otherConfigurations": {
+          "schema": "test_like",
+          "schemaId": "2baf186b-2e57-4af7-80cf-66248bdf8f1e",
+          "datasetId": "5cec71cf-a007-4876-9481-14fa13c0e7a9",
+          "dataset": "test_like_in"
+        },
+        "outputConfigurations": [
+          {
+            "id": "output",
+            "fields": [
+              {
+                "column": "name",
+                "alias": ""
+              },
+              {
+                "column": "age",
+                "alias": ""
+              },
+              {
+                "column": "salary",
+                "alias": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "sink_0",
+        "name": "sink_0",
+        "type": "sink",
+        "x": 839,
+        "y": 27,
+        "otherConfigurations": {
+          "schema": "test_like",
+          "quoteChar": "\"",
+          "escapeChar": "\\",
+          "schemaVersion": "",
+          "sliceTimeColumn": "",
+          "format": "csv",
+          "description": "",
+          "type": "HDFS",
+          "separator": ",",
+          "expiredTime": 0,
+          "mode": "overwrite",
+          "path": "/tmp/dingting/likeyes",
+          "countWrittenRecord": "",
+          "schemaId": "2baf186b-2e57-4af7-80cf-66248bdf8f1e",
+          "datasetId": "58bb3c80-ba27-4b61-b636-3f047a561097",
+          "dataset": "test_like_out_yes",
+          "sliceType": "H"
+        },
+        "inputConfigurations": [
+          {
+            "id": "input",
+            "fields": [
+              {
+                "column": "name"
+              },
+              {
+                "column": "age"
+              },
+              {
+                "column": "salary"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "split_0",
+        "name": "split_0",
+        "type": "split",
+        "x": 490,
+        "y": 132,
+        "otherConfigurations": {
+          "condition": "salary LIKE '%l'"
+        },
+        "inputConfigurations": [
+          {
+            "id": "input",
+            "fields": [
+              {
+                "column": "name"
+              },
+              {
+                "column": "age"
+              },
+              {
+                "column": "salary"
+              }
+            ]
+          }
+        ],
+        "outputConfigurations": [
+          {
+            "id": "yes",
+            "fields": [
+              {
+                "column": "name",
+                "alias": ""
+              },
+              {
+                "column": "age",
+                "alias": ""
+              },
+              {
+                "column": "salary",
+                "alias": ""
+              }
+            ]
+          },
+          {
+            "id": "no",
+            "fields": [
+              {
+                "column": "name",
+                "alias": ""
+              },
+              {
+                "column": "age",
+                "alias": ""
+              },
+              {
+                "column": "salary",
+                "alias": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "sink_1",
+        "name": "sink_1",
+        "type": "sink",
+        "x": 906,
+        "y": 211,
+        "otherConfigurations": {
+          "schema": "test_like",
+          "quoteChar": "\"",
+          "escapeChar": "\\",
+          "schemaVersion": "",
+          "sliceTimeColumn": "",
+          "format": "csv",
+          "description": "",
+          "type": "HDFS",
+          "separator": ",",
+          "expiredTime": 0,
+          "mode": "overwrite",
+          "path": "/tmp/dingting/likeno",
+          "countWrittenRecord": "",
+          "schemaId": "2baf186b-2e57-4af7-80cf-66248bdf8f1e",
+          "datasetId": "08be25bf-2aec-44b3-92f0-0844b4870749",
+          "dataset": "test_like_outno",
+          "sliceType": "H"
+        },
+        "inputConfigurations": [
+          {
+            "id": "input",
+            "fields": [
+              {
+                "column": "name"
+              },
+              {
+                "column": "age"
+              },
+              {
+                "column": "salary"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "spark_split_5",
+        "name": "split",
+        "type": "split",
+        "x": 615,
+        "y": 386,
+        "otherConfigurations": {
+          "sessionCache": "",
+          "interceptor": "",
+          "dataset": "",
+          "condition": "salary LIKE '%l'"
+        },
+        "inputConfigurations": [
+          {
+            "id": "input",
+            "fields": [
+              {
+                "column": "name",
+                "alias": ""
+              },
+              {
+                "column": "age",
+                "alias": ""
+              },
+              {
+                "column": "salary",
+                "alias": ""
+              }
+            ]
+          }
+        ],
+        "outputConfigurations": [
+          {
+            "id": "output",
+            "fields": [
+              {
+                "column": "name",
+                "alias": ""
+              },
+              {
+                "column": "age",
+                "alias": ""
+              },
+              {
+                "column": "salary",
+                "alias": ""
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "links": [
+      {
+        "name": "con_631",
+        "source": "source_0",
+        "sourceOutput": "output",
+        "target": "split_0",
+        "targetInput": "input",
+        "input": "input"
+      },
+      {
+        "name": "con_632",
+        "source": "split_0",
+        "sourceOutput": "yes",
+        "target": "sink_0",
+        "targetInput": "input",
+        "input": "input"
+      },
+      {
+        "name": "con_633",
+        "source": "split_0",
+        "sourceOutput": "no",
+        "target": "sink_1",
+        "targetInput": "input",
+        "input": "input"
+      },
+      {
+        "name": "con_634",
+        "source": "source_0",
+        "sourceOutput": "output",
+        "target": "spark_split_5",
+        "targetInput": "input",
+        "input": "input"
+      }
+    ],
+    "oid": "$null",
+    "creator": "admin",
+    "createTime": 1582465188000,
+    "lastModifier": "admin",
+    "lastModifiedTime": 1582465189000,
+    "owner": "8b057ebb-0f0f-4283-9d81-e51d62f383c4",
+    "version": 3,
+    "enabled": 1,
+    "moduleVersion": 161111,
+    "tenantId": "0c61df9f-3f55-4712-937a-9f5ac2645df5",
+    "resourceId": "da6e8d6f-b913-473e-b981-7174767c63df",
+    "isHide": 0,
+    "parameters": [],
+    "expiredPeriod": 0
+  },
+  "nodeSetVisible": true,
+  "dbStatus": "1",
+  "btnStatus": true,
+  "oldName": "split_0"
+}

@@ -1,0 +1,275 @@
+{
+    "formItemList": [
+        {
+            "name": "engine",
+            "type": "String",
+            "defaultValue": "flink",
+            "description": "执行引擎",
+            "required": true,
+            "advanced": false
+        },
+        {
+            "name": "debug",
+            "type": "boolean",
+            "defaultValue": "false",
+            "description": "debug",
+            "required": true,
+            "advanced": false
+        }
+    ],
+    "adformItemList": [
+        {
+            "key": "runtimeSettings",
+            "value": [
+                {
+                    "name": "master",
+                    "type": "String",
+                    "defaultValue": "yarn",
+                    "description": "资源引擎",
+                    "required": true,
+                    "advanced": false
+                },
+                {
+                    "name": "queue",
+                    "type": "String",
+                    "defaultValue": "default",
+                    "description": "执行队列",
+                    "required": true,
+                    "advanced": false
+                },
+                {
+                    "name": "executors",
+                    "type": "int",
+                    "defaultValue": "2",
+                    "description": "Executor数",
+                    "required": true,
+                    "advanced": false
+                },
+                {
+                    "name": "driverMemory",
+                    "type": "long",
+                    "defaultValue": "1024",
+                    "description": "Driver内存",
+                    "required": true,
+                    "advanced": false
+                },
+                {
+                    "name": "executorMemory",
+                    "type": "long",
+                    "defaultValue": "1024",
+                    "description": "Executor内存",
+                    "required": true,
+                    "advanced": false
+                },
+                {
+                    "name": "executorCores",
+                    "type": "int",
+                    "defaultValue": "1",
+                    "description": "Executor核心数",
+                    "required": true,
+                    "advanced": false
+                },
+                {
+                    "name": "parallelism",
+                    "type": "int",
+                    "defaultValue": "1",
+                    "description": "作业并行度",
+                    "required": true,
+                    "advanced": false
+                },
+                {
+                    "name": "savepointDir",
+                    "type": "String",
+                    "defaultValue": "",
+                    "description": "Savepoint保存路径",
+                    "required": true,
+                    "advanced": false
+                },
+                {
+                    "name": "useLatestState",
+                    "type": "boolean",
+                    "defaultValue": "false",
+                    "description": "使用最新保存的状态恢复",
+                    "required": true,
+                    "advanced": false
+                },
+                {
+                    "name": "ignoreFailStat",
+                    "type": "boolean",
+                    "defaultValue": "true",
+                    "description": "忽略失败的状态",
+                    "required": true,
+                    "advanced": false
+                },
+                {
+                    "name": "kerberosEnable",
+                    "type": "boolean",
+                    "defaultValue": "false",
+                    "description": "开启kerberos",
+                    "required": true,
+                    "advanced": false
+                },
+                {
+                    "name": "kerberosPrincipal",
+                    "type": "String",
+                    "defaultValue": "",
+                    "description": "",
+                    "required": true,
+                    "advanced": false
+                },
+                {
+                    "name": "kerberosKeytab",
+                    "type": "String",
+                    "defaultValue": "",
+                    "description": "",
+                    "required": true,
+                    "advanced": false
+                },
+                {
+                    "name": "kerberosJaasConf",
+                    "type": "String",
+                    "defaultValue": "",
+                    "description": "",
+                    "required": true,
+                    "advanced": false
+                }
+            ]
+        },
+        {
+            "key": "checkpointSettings",
+            "value": [
+                {
+                    "name": "checkpointEnable",
+                    "type": "boolean",
+                    "defaultValue": "true",
+                    "description": "开启checkpoint",
+                    "required": true,
+                    "advanced": false
+                },
+                {
+                    "name": "checkpointMode",
+                    "type": "String",
+                    "defaultValue": "exactly_once",
+                    "description": "checkpoint模式设置",
+                    "values": [
+                        "exactly_once",
+                        "at_least_once"
+                    ],
+                    "required": true,
+                    "advanced": false
+                },
+                {
+                    "name": "checkpointDir",
+                    "type": "String",
+                    "defaultValue": "hdfs:///tmp/flink/checkpoints",
+                    "description": "Checkpoint保存路径",
+                    "required": true,
+                    "advanced": false
+                },
+                {
+                    "name": "checkpointAsync",
+                    "type": "boolean",
+                    "defaultValue": "true",
+                    "description": "异步checkpoint",
+                    "required": true,
+                    "advanced": false
+                },
+                {
+                    "name": "checkpointStateBackend",
+                    "type": "String",
+                    "defaultValue": "memory",
+                    "description": "",
+                    "values": [
+                        "memory",
+                        "filesystem",
+                        "rocksdb"
+                    ],
+                    "required": true,
+                    "advanced": false
+                },
+                {
+                    "name": "checkpointIncremental",
+                    "type": "boolean",
+                    "defaultValue": "false",
+                    "description": "增量checkpoint(仅RocksDB支持)",
+                    "required": true,
+                    "advanced": false
+                },
+                {
+                    "name": "checkpointInterval",
+                    "type": "long",
+                    "defaultValue": "10000",
+                    "description": "checkpoint的间隔时间",
+                    "required": true,
+                    "advanced": false
+                },
+                {
+                    "name": "checkpointMinpause",
+                    "type": "long",
+                    "defaultValue": "5000",
+                    "description": "checkpoint的最小间隔时间",
+                    "required": true,
+                    "advanced": false
+                },
+                {
+                    "name": "checkpointTimeout",
+                    "type": "long",
+                    "defaultValue": "600000",
+                    "description": "checkpoint超时时间",
+                    "required": true,
+                    "advanced": false
+                },
+                {
+                    "name": "checkpointExternalSave",
+                    "type": "boolean",
+                    "defaultValue": "true",
+                    "description": "checkpoint数据在外部存储，如果是true将不会清理过期的checkpoint",
+                    "required": true,
+                    "advanced": false
+                }
+            ]
+        },
+        {
+            "key": "restartStrategySettings",
+            "value": [
+                {
+                    "name": "restartMaxAttempts",
+                    "type": "int",
+                    "defaultValue": "3",
+                    "description": "最大尝试重启次数",
+                    "required": true,
+                    "advanced": false
+                },
+                {
+                    "name": "restartDelayInterval",
+                    "type": "long",
+                    "defaultValue": "10",
+                    "description": "尝试重启的间隔(秒)",
+                    "required": true,
+                    "advanced": false
+                }
+            ]
+        },
+        {
+            "key": "latencyTrackingSettings",
+            "value": [
+                {
+                    "name": "latencyTrackingEnable",
+                    "type": "boolean",
+                    "defaultValue": "false",
+                    "description": "开启延迟追踪",
+                    "required": true,
+                    "advanced": false
+                },
+                {
+                    "name": "latencyTrackingInterval",
+                    "type": "long",
+                    "defaultValue": "60000",
+                    "description": "触发延迟追踪的间隔时间",
+                    "required": true,
+                    "advanced": false
+                }
+            ]
+        }
+    ]
+}

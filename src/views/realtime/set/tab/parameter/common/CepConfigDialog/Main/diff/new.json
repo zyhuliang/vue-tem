@@ -1,0 +1,125 @@
+{
+    "id": "cep_rule_id",
+    "name": "cep_rule_name",
+    "events": [
+      {
+        "eventType": "StartEvent",
+        "id": "star",
+        "name": "start_event_name",
+        "conditions": [
+          {
+            "type": "WHERE",
+            "column": "userId",
+            "operator": "=",
+            "expectedValue": 2
+          }
+        ],
+        "skipStrategy": "NO_SKIP"
+      },
+      {
+        "eventType": "GroupPatternEvent",
+        "id": "group_event_id",
+        "name": "group_event_name",
+        "quantifier": {
+          "strategy": "ONE_OR_MORE"
+        },
+        "loopingContiguity": "NONE",
+        "loopingGreedy": "NONE",
+        "groupPatternId": "cep_group_id"
+      },
+      {
+        "eventType": "ConditionEvent",
+        "id": "end",
+        "name": "end_event_name",
+        "conditions": [
+          {
+            "type": "WHERE",
+            "column": "userId",
+            "operator": "=",
+            "expectedValue": 0
+          }
+        ]
+      }
+    ],
+    "links": [
+      {
+        "name": "link_1",
+        "source": "start",
+        "target": "group_event_id",
+        "linkStrategy": "FOLLOWED_BY"
+      },
+      {
+        "name": "link_2",
+        "source": "group_event_id",
+        "target": "end",
+        "linkStrategy": "FOLLOWED_BY"
+      }
+    ],
+    "cepGroups": [
+      {
+        "id": "cep_group_id",
+        "name": "cep_group_name",
+        "events": [
+          {
+            "eventType": "StartEvent",
+            "id": "group_start_id",
+            "name": "group_start_name",
+            "conditions": [
+              {
+                "type": "WHERE",
+                "column": "userId",
+                "operator": "=",
+                "expectedValue": 2
+              }
+            ],
+            "skipStrategy": "NO_SKIP"
+          },
+          {
+            "eventType": "ConditionEvent",
+            "id": "group_middle_id",
+            "name": "group_middle_name",
+            "conditions": [
+              {
+                "type": "WHERE",
+                "column": "userId",
+                "operator": "=",
+                "expectedValue": 1
+              }
+            ],
+            "quantifier": {
+              "strategy": "ONE_OR_MORE"
+            },
+            "loopingContiguity": "CONSECUTIVE",
+            "loopingGreedy": "NONE"
+          },
+          {
+            "eventType": "ConditionEvent",
+            "id": "group_end_id",
+            "name": "group_end_name",
+            "conditions": [
+              {
+                "type": "WHERE",
+                "column": "userId",
+                "operator": "=",
+                "expectedValue": 0
+              }
+            ]
+          }
+        ],
+        "links": [
+          {
+            "name": "link_1",
+            "source": "group_start_id",
+            "target": "group_middle_id",
+            "linkStrategy": "FOLLOWED_BY"
+          },
+          {
+            "name": "link_2",
+            "source": "group_middle_id",
+            "target": "group_end_id",
+            "linkStrategy": "FOLLOWED_BY"
+          }
+        ]
+      }
+    ]
+  }

@@ -1,0 +1,105 @@
+<template>
+    <el-form id="dataTree" ref="form" :model="form" label-width="80px" @submit.prevent="onSubmit">
+        <div class="dt-menu tree well">
+            <ul class="tree-parent">
+                <li>
+                    <ul class="ulP" v-for="(tree,key,index) in theModel">
+                        <data-inq-tree  ref="dataInqTree" :model="tree"></data-inq-tree>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </el-form>
+</template>
+
+<script>
+    import dataInqTree from './DataSourceTreeMenu.vue'
+    import { resDirTree } from '@api'
+    import {queryObject,createParameter} from '@function/queryParameter.js';
+
+    export default {
+        props:['rootName'],
+        components: {
+            dataInqTree
+        },
+        data() {
+            return {
+                form: {
+                    name: '',
+                    region: '',
+                    date1: '',
+                    date2: '',
+                    delivery: false,
+                    type: [],
+                    resource: '',
+                    desc: ''
+                },
+                theModel: []
+            }
+        },
+        methods: {
+            //获取data菜单接口
+            dataNavList:function dataNavList(parameter){
+                // GET /someUrl
+                resDirTree(parameter).then(data => {
+                    this.theModel = data;
+                    // var parameter={parentId: data[0].id, limit: 8, offset: 0, sorts: "-lastModifiedTime"}
+                    //将owner的equal换成like
+                    var parameter=createParameter('parentId',data[0].id,'EQUAL').And('owner',data[0].owner,'LIKE').Build();
+                    this.$emit('transferNavId',parameter, '', data[0]);
+                }, err => {
+                        this.$message({
+                            message: err.response.message,
+                            type: 'error',
+                            duration: 1500
+                        });
+                    }
+                )
+            },
+
+        },
+        mounted() {
+            var parameter = {allUser: true, excludes: "", includes: this.rootName, strict:true};
+            this.dataNavList(parameter)
+        }
+    }
+
+</script>
+
+<style lang="scss" scoped>
+    #dataTree {
+        float: left;
+        margin: 0 0 0 0;
+        background-color: #f9f9f9;
+        width: 100%;
+        height: 100%;
+        line-height: 10px;
+        overflow: auto;
+        .dt-title {
+            float: left;
+            width: 100%;
+            h3 {
+                float: left;
+                padding: 0px;
+                margin: 15px 10px 10px 10px;
+                font-size: 14px;
+            }
+            label {
+                float: right;
+                margin: 15px 10px 10px 10px;
+            }
+
+        }
+        .dt-menu{
+            float: left;
+            width: 100%;
+        }
+        .dt-menu ul.ulP {
+            margin: 0;
+            padding:0px;
+            div{
+                line-height: 0px;
+            }
+        }
+    }
+</style>

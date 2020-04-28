@@ -1,0 +1,339 @@
+"inputData": [
+    {
+        "id": "input",
+        "fields": [
+            {
+                "column": "left_CREMATORID",
+                "alias": "CREMATORID"
+            },
+            {
+                "column": "left_INCINERATEMAN",
+                "alias": "INCINERATEMAN"
+            },
+            {
+                "column": "left_WHEINTUITION",
+                "alias": "WHEINTUITION"
+            },
+            {
+                "column": "left_WHEPICKASH",
+                "alias": "WHEPICKASH"
+            },
+            {
+                "column": "left_WHEADVANCE",
+                "alias": "WHEADVANCE"
+            },
+            {
+                "column": "left_TAKEGRAYTIME",
+                "alias": "TAKEGRAYTIME"
+            },
+            {
+                "column": "left_ASHGOTO",
+                "alias": "ASHGOTO"
+            },
+            {
+                "column": "left_FAMILYSIGN",
+                "alias": "FAMILYSIGN"
+            },
+            {
+                "column": "left_RELATIONSHIP",
+                "alias": "left_RELATIONSHIP"
+            },
+            {
+                "column": "left_SIGNERTEL",
+                "alias": "SIGNERTEL"
+            },
+            {
+                "column": "left_SIGNERCAEDID",
+                "alias": "SIGNERCAEDID"
+            },
+            {
+                "column": "left_MANAGER",
+                "alias": "MANAGER"
+            },
+            {
+                "column": "left_FUNERALID",
+                "alias": "left_FUNERALID"
+            },
+            {
+                "column": "left_FUNERALNAME",
+                "alias": "left_FUNERALNAME"
+            },
+            {
+                "column": "left_REMARKS",
+                "alias": "left_REMARKS"
+            },
+            {
+                "column": "left_ADDER",
+                "alias": "left_ADDER"
+            },
+            {
+                "column": "left_ADDERID",
+                "alias": "left_ADDERID"
+            },
+            {
+                "column": "left_ADDUNIT",
+                "alias": "left_ADDUNIT"
+            },
+            {
+                "column": "left_ADDUNITID",
+                "alias": "left_ADDUNITID"
+            },
+            {
+                "column": "left_ADDTIME",
+                "alias": "left_ADDTIME"
+            },
+            {
+                "column": "left_DELFLAG",
+                "alias": "left_DELFLAG"
+            },
+            {
+                "column": "left_INCINERATECERTTIME",
+                "alias": "INCINERATECERTTIME"
+            },
+            {
+                "column": "left_SIGNERCARDTYPE",
+                "alias": "SIGNERCARDTYPE"
+            },
+            {
+                "column": "left_ID",
+                "alias": "ID"
+            },
+            {
+                "column": "left_INCINERATENO",
+                "alias": "INCINERATENO"
+            },
+            {
+                "column": "left_INCINERATETIME",
+                "alias": "INCINERATETIME"
+            },
+            {
+                "column": "left_BUSINESSID",
+                "alias": "left_BUSINESSID"
+            },
+            {
+                "column": "right_BUSINESSID",
+                "alias": "right_BUSINESSID"
+            },
+            {
+                "column": "right_FUNERALID",
+                "alias": "FUNERALID"
+            },
+            {
+                "column": "right_FUNERALNAME",
+                "alias": "FUNERALNAME"
+            },
+            {
+                "column": "right_DEADNO",
+                "alias": "DEADNO"
+            },
+            {
+                "column": "right_CORPSETYPR",
+                "alias": "CORPSETYPR"
+            },
+            {
+                "column": "right_DEADNAME",
+                "alias": "DEADNAME"
+            },
+            {
+                "column": "right_CARDTYPE",
+                "alias": "CARDTYPE"
+            },
+            {
+                "column": "right_CARDNO",
+                "alias": "CARDNO"
+            },
+            {
+                "column": "right_GENDER",
+                "alias": "GENDER"
+            },
+            {
+                "column": "right_AGE",
+                "alias": "AGE"
+            },
+            {
+                "column": "right_NATION",
+                "alias": "NATION"
+            },
+            {
+                "column": "right_DEATHTYPE",
+                "alias": "DEATHTYPE"
+            },
+            {
+                "column": "right_DEADSTATE",
+                "alias": "DEADSTATE"
+            },
+            {
+                "column": "right_DEADTIME",
+                "alias": "DEADTIME"
+            },
+            {
+                "column": "right_DEADPLACE",
+                "alias": "DEADPLACE"
+            },
+            {
+                "column": "right_ADDRESS",
+                "alias": "ADDRESS"
+            },
+            {
+                "column": "right_DEATHCERTIFYNO",
+                "alias": "DEATHCERTIFYNO"
+            },
+            {
+                "column": "right_ISSUEUNIT",
+                "alias": "ISSUEUNIT"
+            },
+            {
+                "column": "right_DEATHCERTIFYTYPE",
+                "alias": "DEATHCERTIFYTYPE"
+            },
+            {
+                "column": "right_DEATHCERTIFYANNEX",
+                "alias": "DEATHCERTIFYANNEX"
+            },
+            {
+                "column": "right_CREMCERTIFYNO",
+                "alias": "CREMCERTIFYNO"
+            },
+            {
+                "column": "right_CREMCERTIFYANNEX",
+                "alias": "CREMCERTIFYANNEX"
+            },
+            {
+                "column": "right_CONTACTNAME",
+                "alias": "CONTACTNAME"
+            },
+            {
+                "column": "right_RELATIONSHIP",
+                "alias": "RELATIONSHIP"
+            },
+            {
+                "column": "right_CONTACTPHONE",
+                "alias": "CONTACTPHONE"
+            },
+            {
+                "column": "right_CONTACTTEL",
+                "alias": "CONTACTTEL"
+            },
+            {
+                "column": "right_CONTACTADDRESS",
+                "alias": "CONTACTADDRESS"
+            },
+            {
+                "column": "right_CONTACTID",
+                "alias": "CONTACTID"
+            },
+            {
+                "column": "right_COPYIDANNEX",
+                "alias": "COPYIDANNEX"
+            },
+            {
+                "column": "right_UNITNAME",
+                "alias": "UNITNAME"
+            },
+            {
+                "column": "right_UNITPHONE",
+                "alias": "UNITPHONE"
+            },
+            {
+                "column": "right_UNITADDRESS",
+                "alias": "UNITADDRESS"
+            },
+            {
+                "column": "right_REMARKS",
+                "alias": "REMARKS"
+            },
+            {
+                "column": "right_ADDER",
+                "alias": "ADDER"
+            },
+            {
+                "column": "right_ADDERID",
+                "alias": "ADDERID"
+            },
+            {
+                "column": "right_ADDUNIT",
+                "alias": "ADDUNIT"
+            },
+            {
+                "column": "right_ADDUNITID",
+                "alias": "ADDUNITID"
+            },
+            {
+                "column": "right_ADDTIME",
+                "alias": "ADDTIME"
+            },
+            {
+                "column": "right_DELFLAG",
+                "alias": "DELFLAG"
+            },
+            {
+                "column": "right_STREET",
+                "alias": "STREET"
+            },
+            {
+                "column": "right_COUNTY",
+                "alias": "COUNTY"
+            },
+            {
+                "column": "right_REGISTERFLAG",
+                "alias": "REGISTERFLAG"
+            },
+            {
+                "column": "right_COUNTRY",
+                "alias": "COUNTRY"
+            },
+            {
+                "column": "right_PROVINCE",
+                "alias": "PROVINCE"
+            },
+            {
+                "column": "right_CITY",
+                "alias": "CITY"
+            },
+            {
+                "column": "right_ARRIVE",
+                "alias": "ARRIVE"
+            },
+            {
+                "column": "right_HOUSEPROVINCE",
+                "alias": "HOUSEPROVINCE"
+            },
+            {
+                "column": "right_HOUSECITY",
+                "alias": "HOUSECITY"
+            },
+            {
+                "column": "right_HOUSECOUNTY",
+                "alias": "HOUSECOUNTY"
+            },
+            {
+                "column": "right_CARDNOINSTRUCTION",
+                "alias": "CARDNOINSTRUCTION"
+            },
+            {
+                "column": "right_BIRTHDATE",
+                "alias": "BIRTHDATE"
+            },
+            {
+                "column": "right_ISSUEDATE",
+                "alias": "ISSUEDATE"
+            },
+            {
+                "column": "right_PREFERENTIALTYPE",
+                "alias": "PREFERENTIALTYPE"
+            },
+            {
+                "column": "right_ISMEMBER",
+                "alias": "ISMEMBER"
+            },
+            {
+                "column": "right_CONTACTCARDTYPE",
+                "alias": "CONTACTCARDTYPE"
+            },
+            {
+                "column": "right_DEADPIC",
+                "alias": "DEADPIC"
+            }
+        ]
+    }
+],
